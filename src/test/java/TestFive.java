@@ -80,8 +80,8 @@ public class TestFive {
         driver.get("https://www.lambdatest.com/selenium-playground/radiobutton-demo");
         driver.findElement(By.xpath("//div[1]/label[@class='text-size-16 mt-10 text-black mr-20']//input[@value='Male']")).click();
         driver.findElement(By.xpath("//div[2]/label[@class='text-size-16 mt-10 text-black mr-20']//input[@value='0 - 5']")).click();
-        String text = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[2]/p[2]/span")).getText();
-        Assert.assertEquals("0 - 5", text);
+        String age = driver.findElement(By.xpath("//div[@class='w-4/12 smtablet:w-full rigth-input']//p[2]/span")).getText();
+        Assert.assertEquals("0 - 5", age);
     }
 
 
