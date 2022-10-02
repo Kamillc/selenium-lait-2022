@@ -77,7 +77,7 @@ public class TestFive {
     @Test
     public void testlocalfile (){
         driver.get("file:///Users/LAIT/Desktop/Selenium/selenium-lait-2022/home.html");
-        String text = driver.findElement(By.xpath("//p")).getText();
+        String text = driver.findElement(By.xpath("/html/body/p[1]")).getText();
         Assert.assertEquals("tekst losowy", text);
     }
 
