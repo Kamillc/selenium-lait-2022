@@ -74,11 +74,16 @@ public class TestFive {
         Boolean message_is_displayed = driver.findElement(By.xpath("//div[@id='txtAge']")).isDisplayed();
         Assert.assertTrue(message_is_displayed);
     }
+
     @Test
-    public void testlocalfile (){
-        driver.get("file:///Users/LAIT/Desktop/Selenium/selenium-lait-2022/home.html");
-        String text = driver.findElement(By.xpath("/html/body/p[1]")).getText();
-        Assert.assertEquals("tekst losowy", text);
+    public void dwachckboxy() {
+        driver.get("https://www.lambdatest.com/selenium-playground/radiobutton-demo");
+        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div[1]/label[1]/input")).click();
+        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div[2]/label[1]/input")).click();
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[2]/p[2]/span"))));
+        String text = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[2]/p[2]/span")).getText();
+        Assert.assertEquals(0 - 5, text);
     }
+
 
 }
