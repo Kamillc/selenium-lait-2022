@@ -82,7 +82,7 @@ public class TestFive {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div[2]/label[1]/input")).click();
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[2]/p[2]/span"))));
         String text = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[2]/p[2]/span")).getText();
-        Assert.assertEquals(0 - 5, text);
+        Assert.assertEquals("0 - 5", text);
     }
 
 
