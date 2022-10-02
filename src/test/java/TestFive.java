@@ -78,10 +78,10 @@ public class TestFive {
     @Test
     public void dwachckboxy() {
         driver.get("https://www.lambdatest.com/selenium-playground/radiobutton-demo");
-        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div[1]/label[1]/input")).click();
-        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[1]/div[2]/label[1]/input")).click();
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[2]/p[2]/span"))));
-        String text = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[2]/p[2]/span")).getText();
+        driver.findElement(By.xpath("//div[1]/label[@class='text-size-16 mt-10 text-black mr-20']//input[@value='Male']")).click();
+        driver.findElement(By.xpath("//div[2]/label[@class='text-size-16 mt-10 text-black mr-20']//input[@value='0 - 5']")).click();
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector(".groupradiobutton"))));
+        String text = driver.findElement(By.cssSelector(".groupradiobutton")).getText();
         Assert.assertEquals("0 - 5", text);
     }
 
